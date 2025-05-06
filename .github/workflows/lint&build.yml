@@ -1,8 +1,7 @@
 name: lint&build
 
 on:
-  push:
-    branches: [ master ]
+  workflow_dispatch:
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
