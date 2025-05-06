@@ -1,4 +1,7 @@
-module.exports = [
+import js from "@eslint/js";
+
+export default [
+  js.configs.recommended,
   {
     files: ["**/*.js"],
     languageOptions: {
@@ -14,7 +17,6 @@ module.exports = [
       "linebreak-style": ["error", "unix"],
       quotes: ["error", "single"],
       semi: ["error", "always"]
-    },
-    extends: ["eslint:recommended"]
+    }
   }
 ];
