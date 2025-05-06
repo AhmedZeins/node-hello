@@ -7,6 +7,8 @@ terraform {
   }
 }
 
+provider "docker" {
+}
 
 resource "docker_image" "node_hello" {
   name = "zeinsss/node-hello:latest"
@@ -21,6 +23,3 @@ resource "docker_container" "node_hello" {
     external = 3000
   }
 }
-
-
-
