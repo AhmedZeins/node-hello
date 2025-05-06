@@ -1,6 +1,6 @@
-import js from "@eslint/js";
+const js = require("@eslint/js");
 
-export default [
+module.exports = [
   js.configs.recommended,
   {
     files: ["**/*.js"],
@@ -9,14 +9,14 @@ export default [
       ecmaVersion: "latest",
       env: {
         node: true,
-        es2021: true
-      }
+        es2021: true,
+      },
     },
     rules: {
       indent: ["error", 2],
       "linebreak-style": ["error", "unix"],
       quotes: ["error", "single"],
-      semi: ["error", "always"]
-    }
-  }
+      semi: ["error", "always"],
+    },
+  },
 ];
