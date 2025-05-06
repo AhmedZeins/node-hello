@@ -1,22 +1,18 @@
-const js = require("@eslint/js");
-
-module.exports = [
-  js.configs.recommended,
-  {
-    files: ["**/*.js"],
-    languageOptions: {
-      sourceType: "module",
-      ecmaVersion: "latest",
-      env: {
-        node: true,
-        es2021: true,
-      },
-    },
-    rules: {
-      indent: ["error", 2],
-      "linebreak-style": ["error", "unix"],
-      quotes: ["error", "single"],
-      semi: ["error", "always"],
-    },
+// .eslintrc.cjs
+module.exports = {
+  env: {
+    node: true,
+    es2021: true,
   },
-];
+  extends: ["eslint:recommended"],
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  rules: {
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "single"],
+    semi: ["error", "always"],
+  },
+};
