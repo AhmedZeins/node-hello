@@ -1,4 +1,4 @@
-// eslint.config.js
+// eslint.config.js (now loaded as ES module)
 import js from "@eslint/js";
 
 export default [
