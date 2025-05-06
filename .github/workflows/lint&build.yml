@@ -2,7 +2,7 @@ name: lint&build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   IMAGE_NAME: hello-world-app
