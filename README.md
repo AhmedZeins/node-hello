@@ -70,4 +70,15 @@ terraform destroy -auto-approve
 ```
 
 ---
+## Viewing Container Logs
 
+After deploying the application using Terraform, you can view the container logs to monitor its activity and troubleshoot any issues. Follow these steps:
+
+1. **Access the Container:**
+   - Use the command `docker ps -a` to list all containers, including those that have exited, and find the `node-hello-container`.
+
+2. **View Logs:**
+   - Execute `docker logs node-hello-container` to display the logs for the container.
+
+These logs provide insights into the application's runtime behavior and any potential errors.
+![CI/CD & Terraform Architecture](images/app.png)
