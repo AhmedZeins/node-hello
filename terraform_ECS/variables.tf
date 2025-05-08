@@ -1,27 +1,28 @@
 variable "aws_region" {
-  description = "AWS region, e.g. us-east-1"
+  description = "AWS region"
   type        = string
   default     = "us-east-1"
 }
-
 variable "dockerhub_username" {
-  description = "Your Docker Hub username"
+  description = "Docker Hub username"
   type        = string
 }
-
 variable "repository_name" {
-  description = "Docker Hub repo name, e.g. node-hello"
+  description = "Docker image repo name"
   type        = string
 }
-
 variable "execution_role_name" {
-  description = "IAM role name for ECS task execution"
+  description = "ECS task execution role name"
   type        = string
   default     = "ecsTaskExecutionRole"
 }
-
+variable "cluster_name" {
+  description = "ECS cluster name"
+  type        = string
+  default     = "node-hello-cluster"
+}
 variable "desired_count" {
-  description = "Number of desired ECS tasks"
+  description = "Number of tasks to run"
   type        = number
   default     = 1
 }
