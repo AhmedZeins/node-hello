@@ -82,3 +82,63 @@ After deploying the application using Terraform, you can view the container logs
 
 These logs provide insights into the application's runtime behavior and any potential errors.
 ![CI/CD & Terraform Architecture](images/app.png)
+
+---
+## 3. AWS ECS Fargate Deployment
+
+This section demonstrates how to deploy the application to AWS ECS Fargate using Terraform modules.
+
+### Prerequisites
+
+- AWS CLI configured with appropriate credentials
+- Terraform (v1.6+ recommended)
+- Docker image pushed to Docker Hub
+
+### Deployment Steps
+
+1. **Navigate to the ECS Terraform directory:**
+   ```bash
+   cd terraform_ECS/
+   ```
+
+2. **Initialize Terraform:**
+   ```bash
+   terraform init
+   ```
+
+3. **Review and apply the configuration:**
+   ```bash
+   terraform plan
+   terraform apply 
+   ```
+
+### What This Deploys
+
+The ECS Terraform configuration creates:
+
+- Uses the default VPC and its subnets
+- Security Group allowing inbound traffic on port 3000
+- CloudWatch Log Group for container logs
+- ECS Cluster
+- ECS Task Definition for the Node.js application
+- ECS Service running on Fargate
+- IAM execution role for ECS tasks
+
+
+Visit the DNS name in your browser to access the application.
+
+### Clean Up
+
+To destroy all created resources:
+
+```bash
+terraform destroy 
+```
+
+### Deployment Screenshots
+
+![Container Logs](images/AWS_Logs.png)
+*CI/CD & Terraform Architecture*
+
+![Running Container](images/container.png)
+*Application Running in Container*
