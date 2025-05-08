@@ -125,8 +125,6 @@ The ECS Terraform configuration creates:
 - IAM execution role for ECS tasks
 
 
-Visit the DNS name in your browser to access the application.
-
 ### Clean Up
 
 To destroy all created resources:
